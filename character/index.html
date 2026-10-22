@@ -10,6 +10,32 @@
 <style>
 /* ---- Page-specific rules ---- */
 
+/* Overview slides on the deep fill, with the primary text set larger. */
+.slide-dark { background: var(--deep); border-color: var(--deep); color: var(--paper); }
+.slide-dark .slide-head { color: rgba(255,255,255,.62); }
+.slide-dark .slide-head .slide-num, .slide-dark .slide-head-sub { color: var(--paper); }
+.slide-dark .slide-head-sub::before { color: rgba(255,255,255,.4); }
+.slide-dark .slide-lede { font-size: clamp(22px, 3.6cqw, 48px); max-width: 30ch; }
+.slide-dark .slide-row { border-top-color: var(--hairline-light); }
+.slide-dark .slide-row:first-child { border-top-color: rgba(255,255,255,.5); }
+.slide-dark .slide-row-lab { font-size: clamp(14px, 1.5cqw, 20px); }
+.slide-dark .slide-row p { font-size: clamp(16px, 2cqw, 27px); max-width: 52ch; }
+.slide-dark .slide-link { border-bottom-color: rgba(255,255,255,.4); }
+.slide-dark .slide-link:hover { border-bottom-color: var(--paper); }
+.slide-dark .slide-img { background: rgba(255,255,255,.08); }
+
+/* A direction preview. Name and description on the left, references on the right. */
+.slide-dir { margin-top: auto; display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(24px, 4cqw, 60px); align-items: end; }
+.slide-dir-title { font-family: var(--font); font-weight: 650; letter-spacing: -0.03em; font-size: clamp(32px, 5.4cqw, 76px); line-height: 1; }
+.slide-dir-copy p { margin-top: clamp(12px, 1.8cqw, 24px); font-size: clamp(17px, 2.2cqw, 30px); line-height: 1.32; letter-spacing: -0.01em; }
+
+/* Direction covers. The description wraps at half the slide and runs a step heavier. */
+.slide-cover .slide-tagline { max-width: 50%; font-weight: 500; }
+
+@media (max-width: 820px) {
+  .slide-dir { grid-template-columns: 1fr; }
+  .slide-cover .slide-tagline { max-width: none; }
+}
 
 </style>
 <link rel="stylesheet" href="https://system.studioparkside.co/print.css">
@@ -70,54 +96,64 @@
 
       <!-- 01 Overview -->
       <article class="deck-chapter" id="overview" data-name="Overview" data-num="01" aria-label="01 Overview">
-        <div class="deck-slide">
+        <div class="deck-slide slide-dark">
           <div class="slide-head"><span class="slide-num">01</span> Overview</div>
-          <p class="slide-lede">Nothing on this page is final. These are directions to react to, and the goal is to pick one to turn into the identity.</p>
+          <p class="slide-lede">Nothing in this document is final. These are directions to react to, and the goal is to pick one to turn into the identity.</p>
           <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Notes</div><p>Notes on what you like are valuable, and so are the things you&rsquo;d like to stay away from, whether it&rsquo;s a color, a typeface, or a reference that misses.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Notes</div><p>Comments on what you like are valuable, and so are the things you&rsquo;d like to stay away from, whether it&rsquo;s a color, a typeface, or a reference that misses.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Brief</div><p><a class="slide-link" href="https://boulderflipside.studioparkside.co/brief/">Open the project brief <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" style="width:.62em;height:.62em;vertical-align:.12em"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
           </div>
         </div>
-      </article>
-
-      <!-- 02 Directions -->
-      <article class="deck-chapter" id="directions" data-name="Directions" data-num="02" aria-label="02 Directions">
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Directions</div>
-          <p class="slide-lede">Both directions are built around the brand character in the project brief, and each one flips the name in its own way.</p>
-          <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Direction 01</div><p><strong>Look again.</strong> A modern identity inspired by contemporary art galleries, with neon-bright color and a clean, commanding look that pulls people in from the street.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Direction 02</div><p><strong>Pressed by hand.</strong> An identity inspired by printmaking, where every stamp is the mirror image of what it prints, so the program feels made by the artists it celebrates.</p></div>
+        <div class="deck-slide slide-dark">
+          <div class="slide-head"><span class="slide-num">01</span> Overview <span class="slide-head-sub">Directions</span></div>
+          <p class="slide-lede">Both directions are built around the brand character in the project brief, and each one interprets the name and concept in its own way.</p>
+        </div>
+        <div class="deck-slide slide-dark">
+          <div class="slide-head"><span class="slide-num">01</span> Overview <span class="slide-head-sub">Direction 01</span></div>
+          <div class="slide-dir">
+            <div class="slide-dir-copy">
+              <h2 class="slide-dir-title">Look again.</h2>
+              <p>A modern identity inspired by contemporary art galleries, with neon-bright color and a clean, commanding look that pulls people in from the street.</p>
+            </div>
+            <div class="slide-preview-grid">
+              <div class="slide-img"><img src="../_assets/img/01-01.jpg" alt="Blue poster with type turned on its side" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/01-02.jpg" alt="Storefront window with large red type" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/01-03.jpg" alt="Figure walking down a white gallery corridor" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/01-04.jpg" alt="Neon signs on a city street" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/01-06.jpg" alt="Pith wordmark" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/01-12.jpg" alt="Rotational un monogram" loading="lazy"></div>
+            </div>
           </div>
         </div>
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Directions <span class="slide-head-sub">Preview</span></div>
-          <div class="slide-preview-pair">
-            <a class="slide-preview" href="#direction-01" data-preview="direction-01">
-              <div class="slide-row-lab">Direction 01 <strong>Look again.</strong></div>
-              <div class="slide-preview-grid"></div>
-              <div class="slide-preview-swatches"></div>
-            </a>
-            <a class="slide-preview" href="#direction-02" data-preview="direction-02">
-              <div class="slide-row-lab">Direction 02 <strong>Pressed by hand.</strong></div>
-              <div class="slide-preview-grid"></div>
-              <div class="slide-preview-swatches"></div>
-            </a>
+        <div class="deck-slide slide-dark">
+          <div class="slide-head"><span class="slide-num">01</span> Overview <span class="slide-head-sub">Direction 02</span></div>
+          <div class="slide-dir">
+            <div class="slide-dir-copy">
+              <h2 class="slide-dir-title">Pressed by hand.</h2>
+              <p>An identity inspired by printmaking, where every stamp is the mirror image of what it prints, so the program feels made by the artists it celebrates.</p>
+            </div>
+            <div class="slide-preview-grid">
+              <div class="slide-img"><img src="../_assets/img/02-01.jpg" alt="Person pulling a screen print" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/02-02.jpg" alt="Riso print of hands in overlapping inks" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/02-03.jpg" alt="Blue stamped seal reading Stamped" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/02-04.jpg" alt="Print shop wall covered in posters" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/02-06.jpg" alt="Housend typeface poster" loading="lazy"></div>
+              <div class="slide-img"><img src="../_assets/img/02-10.jpg" alt="Stamped AB monogram in a circle" loading="lazy"></div>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- 03 Direction 01 -->
-      <article class="deck-chapter" id="direction-01" data-name="Direction 01" data-num="03" aria-label="03 Direction 01">
+      <!-- 02 Direction 01 -->
+      <article class="deck-chapter" id="direction-01" data-name="Direction 01" data-num="02" aria-label="02 Direction 01">
         <div class="deck-slide slide-cover">
           <img class="slide-media" src="../_assets/img/01-concept.jpg" alt="">
           <div class="slide-num">Direction 01</div>
           <h2 class="slide-title">Look again.</h2>
           <p class="slide-tagline">A modern identity inspired by contemporary art galleries, with neon-bright color and a clean, commanding look that pulls people in from the street.</p>
-          <p class="slide-tagline">Clear, bold, welcoming</p>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Vibe board</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Direction 01 <span class="slide-head-sub">Vibe board</span></div>
           <p class="slide-body">This direction takes the look of a contemporary art gallery and brings it out to the sidewalk. Clean layouts and bold type give it the confidence of a museum, and neon-bright color signals from the street that art is open inside. The flip is built into the letters of the name, so the longer someone looks, the more they find.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/01-01.jpg" alt="Blue poster with type turned on its side" loading="lazy"></div><p><strong>01-01</strong> &middot; A poster that asks for a second look</p></div>
@@ -127,7 +163,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Logotype</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Direction 01 <span class="slide-head-sub">Logotype</span></div>
           <p class="slide-body">The name could be set in bold, simple letters that read from across the street. Some letters in Boulder Flipside are mirror images of each other, and the word mark could use that to flip the name from inside.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/01-05.jpg" alt="Salt wordmark" loading="lazy"></div><p><strong>01-05</strong> &middot; Bold letters that read from across the street</p></div>
@@ -137,7 +173,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Mark</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Direction 01 <span class="slide-head-sub">Mark</span></div>
           <p class="slide-body">The icon could pull the B from Boulder and the F from Flipside together into one mark. It could borrow from ambigrams, letters designed to read when they&rsquo;re turned or mirrored.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/01-09.jpg" alt="Monogram of a mirrored d and b" loading="lazy"></div><p><strong>01-09</strong> &middot; One letter flipped into another</p></div>
@@ -147,7 +183,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Color</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Direction 01 <span class="slide-head-sub">Color</span></div>
           <p class="slide-body">These colors are bold, high contrast, and inspired by neon signs. In a window, on a sidewalk, or on a phone, they signal that art is open inside.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/01-13.jpg" alt="Bright poster in blue and lime" loading="lazy"></div><p><strong>01-13</strong> &middot; Two bright colors that stand out together</p></div>
@@ -157,17 +193,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Palette</span></div>
-          <div class="slide-visuals five">
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-          </div>
-        </div>
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Direction 01 <span class="slide-head-sub">Layout</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Direction 01 <span class="slide-head-sub">Layout</span></div>
           <p class="slide-body">Like a gallery wall, big type and open space could make each piece clear at a glance. Some pieces could mirror from one side to the other, giving the storefronts a front and a flip side.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/01-17.jpg" alt="Grid poster with menu style type" loading="lazy"></div><p><strong>01-17</strong> &middot; A simple grid that&rsquo;s easy to scan</p></div>
@@ -178,17 +204,16 @@
         </div>
       </article>
 
-      <!-- 04 Direction 02 -->
-      <article class="deck-chapter" id="direction-02" data-name="Direction 02" data-num="04" aria-label="04 Direction 02">
+      <!-- 03 Direction 02 -->
+      <article class="deck-chapter" id="direction-02" data-name="Direction 02" data-num="03" aria-label="03 Direction 02">
         <div class="deck-slide slide-cover">
           <img class="slide-media" src="../_assets/img/02-concept.jpg" alt="">
           <div class="slide-num">Direction 02</div>
           <h2 class="slide-title">Pressed by hand.</h2>
           <p class="slide-tagline">An identity inspired by printmaking, where every stamp is the mirror image of what it prints, so the program feels made by the artists it celebrates.</p>
-          <p class="slide-tagline">Hands-on, layered, off-register</p>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Vibe board</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Direction 02 <span class="slide-head-sub">Vibe board</span></div>
           <p class="slide-body">This direction takes its flip from printmaking, where every stamp, block, and screen is the mirror image of what it prints. Layered ink, bright color, and lettering with a handmade edge make the program feel made by the artists it celebrates. It pairs the energy of a big-city art opening with the craft of local makers.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/02-01.jpg" alt="Person pulling a screen print" loading="lazy"></div><p><strong>02-01</strong> &middot; Made by hand</p></div>
@@ -198,7 +223,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Logotype</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Direction 02 <span class="slide-head-sub">Logotype</span></div>
           <p class="slide-body">The name could be set in lettering with the slightly uneven edges you see on stamps, hand-pulled prints, and screen-printed posters. Part of it could be flipped the way a stamp is before it touches paper.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/02-05.jpg" alt="Magic Oyster typeface" loading="lazy"></div><p><strong>02-05</strong> &middot; Playful letters with a friendly feel</p></div>
@@ -208,7 +233,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Mark</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Direction 02 <span class="slide-head-sub">Mark</span></div>
           <p class="slide-body">The icon could layer letters from the name over each other, possibly inside a stamp. Like a stamp at the door, it could mark each venue as part of the program.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/02-09.jpg" alt="Interlocking C and B monogram" loading="lazy"></div><p><strong>02-09</strong> &middot; Two letters layered into one</p></div>
@@ -218,7 +243,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Color</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Direction 02 <span class="slide-head-sub">Color</span></div>
           <p class="slide-body">Bright inks overlap into new colors, the way they do on a print. Each piece can look a little different and still be recognizable as one program.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/02-13.jpg" alt="Riso ink color chart" loading="lazy"></div><p><strong>02-13</strong> &middot; Ink colors and the mixes between them</p></div>
@@ -228,17 +253,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Palette</span></div>
-          <div class="slide-visuals five">
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-            <div class="slide-visual"><div class="slide-img slide-swatch"></div><p><strong>[Name]</strong> #000000</p></div>
-          </div>
-        </div>
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">04</span> Direction 02 <span class="slide-head-sub">Layout</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Direction 02 <span class="slide-head-sub">Layout</span></div>
           <p class="slide-body">Heavy type and collaged layouts could make each piece feel like an object someone made. Some pieces could turn design elements on their side or run text upside down, so the poster turns in your hands.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/img/02-17.jpg" alt="Red collage poster" loading="lazy"></div><p><strong>02-17</strong> &middot; Photos and type cut and layered</p></div>
@@ -249,27 +264,25 @@
         </div>
       </article>
 
-      <!-- 05 Next steps -->
-      <article class="deck-chapter" id="next-steps" data-name="Next steps" data-num="05" aria-label="05 Next steps">
+      <!-- 04 Next steps -->
+      <article class="deck-chapter" id="next-steps" data-name="Next steps" data-num="04" aria-label="04 Next steps">
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">05</span> Next steps</div>
+          <div class="slide-head"><span class="slide-num">04</span> Next steps</div>
           <p class="slide-lede">Pick the direction that moves forward, and I&rsquo;ll turn it into the identity.</p>
           <div class="slide-preview-pair">
             <a class="slide-preview" href="#direction-01" data-preview="direction-01">
               <div class="slide-row-lab">Direction 01 <strong>Look again.</strong></div>
               <div class="slide-preview-grid"></div>
-              <div class="slide-preview-swatches"></div>
             </a>
             <a class="slide-preview" href="#direction-02" data-preview="direction-02">
               <div class="slide-row-lab">Direction 02 <strong>Pressed by hand.</strong></div>
               <div class="slide-preview-grid"></div>
-              <div class="slide-preview-swatches"></div>
             </a>
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">05</span> Next steps <span class="slide-head-sub">Conversation</span></div>
-          <p class="slide-lede">Here&rsquo;s what I&rsquo;d love to hear from each of you.</p>
+          <div class="slide-head"><span class="slide-num">04</span> Next steps <span class="slide-head-sub">Conversation</span></div>
+          <p class="slide-lede">Here are some thought starters for discussing which direction is the best fit for your brand.</p>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">01</div><p>Which direction feels most like Boulder Flipside?</p></div>
             <div class="slide-row"><div class="slide-row-lab">02</div><p>Which one would get you to stop and walk in from the street?</p></div>
@@ -278,7 +291,7 @@
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">05</span> Next steps <span class="slide-head-sub">After you pick</span></div>
+          <div class="slide-head"><span class="slide-num">04</span> Next steps <span class="slide-head-sub">After you pick</span></div>
           <p class="slide-lede">Once you pick one, I&rsquo;ll design the logo alongside every campaign piece.</p>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">What to expect</div><p>Colors, type, and layout may shift once they&rsquo;re all working together, and the finished identity will be close to the direction you pick without matching it exactly.</p></div>
@@ -286,10 +299,10 @@
         </div>
       </article>
 
-      <!-- 06 Project sequence -->
-      <article class="deck-chapter" id="sequence" data-name="Project sequence" data-num="06" aria-label="06 Project sequence">
+      <!-- 05 Project sequence -->
+      <article class="deck-chapter" id="sequence" data-name="Project sequence" data-num="05" aria-label="05 Project sequence">
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">06</span> Project sequence</div>
+          <div class="slide-head"><span class="slide-num">05</span> Project sequence</div>
           <div class="slide-rows">
             <div class="slide-row slide-seq"><div class="slide-row-lab">01 Kickoff</div><p>Audience, brand character, and campaign materials.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">02 Project brief</div><p>Everything from kickoff, with a tentative schedule.</p><span class="pill done">Completed</span></div>
