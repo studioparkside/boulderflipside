@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Boulder Flipside — Identity — Walkthrough</title>
+<title>Boulder Flipside — Brand Identity</title>
 <link rel="stylesheet" href="https://system.studioparkside.co/tokens.css">
 <link rel="stylesheet" href="https://system.studioparkside.co/parkside.css">
 <style>
@@ -14,10 +14,6 @@
 body { padding-top: var(--pad); }
 .deck.is-live { --stage-top: 12px; --stage-h: calc(100svh - var(--foot-h, 0px) - 24px); }
 .deck-chapter { scroll-margin-top: 12px; }
-/* The cover's entry in the index reads as the deck title, bold and in ink, with no number or pips. */
-.deck-index a:first-child { display: block; font-weight: 700; font-size: 15px; color: var(--ink); padding: 0 0 16px; }
-.deck-index a:first-child .n, .deck-index a:first-child .deck-pips { display: none; }
-
 /* Arrows at the top right of every slide, smaller and semi-transparent, so the foot of the slide is free for images. */
 .deck.is-live .slide-nav { top: clamp(14px, 2cqw, 26px); bottom: auto; opacity: .55; transition: opacity .15s ease; }
 .deck.is-live .slide-nav:hover, .deck.is-live .slide-nav:focus-within { opacity: 1; }
@@ -48,7 +44,6 @@ body { padding-top: var(--pad); }
 /* Cover description wraps at half the slide and runs a step heavier. The scrim climbs from the foot of the slide up past the headline. */
 .slide-cover .slide-tagline { max-width: 50%; font-weight: 500; }
 .slide-cover:has(.slide-media)::after { background: linear-gradient(to top, rgb(0 0 0 / .82) 0%, rgb(0 0 0 / .66) 26%, rgb(0 0 0 / .3) 50%, transparent 70%), linear-gradient(to bottom, rgb(0 0 0 / .32), transparent 26%); }
-.slide-media.lower { object-position: 50% 64%; }
 
 /* The Studio Parkside logo sits where the cover's top line would be. The shared date stays in the footer pills. */
 .slide-cover .slide-logo { display: block; align-self: flex-start; height: clamp(13px, 1.4cqw, 19px); width: auto; aspect-ratio: 1499.4 / 151; fill: var(--paper); }
@@ -93,25 +88,24 @@ body { padding-top: var(--pad); }
 <div class="stack">
 
   <!-- Deck, every section as a slide -->
-  <section class="deck" data-deck aria-label="Identity walkthrough">
+  <section class="deck" data-deck aria-label="Brand identity">
     <div class="deck-stage">
       <nav class="deck-index" aria-label="Sections"></nav>
       <div class="deck-frame">
 
       <!-- Cover -->
-      <article class="deck-chapter" id="cover" data-name="Walkthrough" data-num="" aria-label="Boulder Flipside, Identity, Walkthrough">
+      <article class="deck-chapter" id="cover" data-name="Boulder Flipside" data-project="Brand Identity" data-num="" aria-label="Boulder Flipside, Brand Identity">
         <div class="deck-slide slide-cover">
           <svg class="slide-logo" role="img" aria-label="Studio Parkside"><use href="#sp-logo"/></svg>
-          <h1 class="slide-title">Boulder Flipside<br><span class="h1-project">Identity</span><span class="h1-sub">Walkthrough</span></h1>
+          <h1 class="slide-title">Boulder Flipside<br><span class="h1-project">Brand Identity</span></h1>
         </div>
         <div class="deck-slide slide-dark">
           <nav class="slide-toc-list" aria-label="Contents">
             <a href="#recap"><span class="n">A</span><span>Recap</span></a>
-            <a href="#character"><span class="n">01</span><span>Brand character</span></a>
-            <a href="#deliverables"><span class="n">02</span><span>Deliverables</span></a>
-            <a href="#identity"><span class="n">03</span><span>Identity</span></a>
-            <a href="#guidelines"><span class="n">04</span><span>Brand guidelines</span></a>
-            <a href="#sequence"><span class="n">05</span><span>Project sequence</span></a>
+            <a href="#deliverables"><span class="n">01</span><span>Deliverables</span></a>
+            <a href="#identity"><span class="n">02</span><span>Identity</span></a>
+            <a href="#guidelines"><span class="n">03</span><span>Brand guidelines</span></a>
+            <a href="#sequence"><span class="n">04</span><span>Project sequence</span></a>
           </nav>
         </div>
       </article>
@@ -119,11 +113,8 @@ body { padding-top: var(--pad); }
       <!-- A Recap -->
       <article class="deck-chapter" id="recap" data-name="Recap" data-num="A" aria-label="A Recap">
         <div class="deck-slide slide-dark">
-          <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Audience</span></div>
-          <p class="slide-lede">The brand speaks first to visitors in town for Sundance who don&rsquo;t know Boulder&rsquo;s arts scene. People who live here come second.</p>
-          <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Brief</div><p><a class="slide-link" href="https://boulderflipside.studioparkside.co/brief/">Open the project brief <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" style="width:.62em;height:.62em;vertical-align:.12em"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
-          </div>
+          <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Project</span></div>
+          <p class="slide-lede">Boulder Flipside is a program of art, sound, performance, and talks in spaces around Boulder during Sundance. I designed its logo and look, along with the posters, social posts, emails, and storefront signs that announce it.</p>
         </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Brand character</span></div>
@@ -135,41 +126,12 @@ body { padding-top: var(--pad); }
             <div class="slide-row"><div class="slide-row-lab">Every kind of program</div><p>Visual art, sound, performance, immersive work, talks. No reference to any one medium.</p></div>
           </div>
         </div>
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Directions to avoid</span></div>
-          <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Generic Colorado</div><p>Mountain triangles, the Colorado flag and its colors, ski and climbing gear, aspen leaves, natural greens and browns.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Flatirons</div><p>Left out, or a subtle reference within the overall identity.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Sundance</div><p>Film imagery, the rounded 16:9 frame, the yellow circle, primary-color gradients.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Nostalgia</div><p>Retro and vintage looks.</p></div>
-          </div>
-        </div>
       </article>
 
-      <!-- 01 Brand character -->
-      <article class="deck-chapter" id="character" data-name="Brand character" data-num="01" aria-label="01 Brand character">
-        <div class="deck-slide slide-cover">
-          <img class="slide-media lower" src="../_assets/img/02-concept.jpg" alt="">
-          <div class="slide-num">Brand character</div>
-          <h2 class="slide-title">Pressed by hand.</h2>
-          <p class="slide-tagline">A tactile identity inspired by printmaking and the name itself. Bright colors overlap, and free-form layouts bring energy to every piece.</p>
-        </div>
+      <!-- 01 Deliverables -->
+      <article class="deck-chapter" id="deliverables" data-name="Deliverables" data-num="01" aria-label="01 Deliverables">
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">01</span> Brand character <span class="slide-head-sub">Your notes</span></div>
-          <p class="slide-lede">You picked Pressed by hand, and these notes shaped the identity.</p>
-          <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Logo typeface</div><p>Not too folksy or distracting.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Letterforms</div><p>Cohesive, closest to the MANNA sample and The Faint poster Tatiana shared.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Color</div><p>Overlapping colors with transparency, bright and playful.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Event details</div><p>Clear and easy to read.</p></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- 02 Deliverables -->
-      <article class="deck-chapter" id="deliverables" data-name="Deliverables" data-num="02" aria-label="02 Deliverables">
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Deliverables <span class="slide-head-sub">Brand identity</span></div>
+          <div class="slide-head"><span class="slide-num">01</span> Deliverables <span class="slide-head-sub">Brand identity</span></div>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">Primary mark</div><p>With a logo lockup and secondary iteration.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Iconic mark</div><p>A simplified graphic for the social avatar, the favicon, and other small applications.</p></div>
@@ -178,7 +140,7 @@ body { padding-top: var(--pad); }
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Deliverables <span class="slide-head-sub">Campaign materials</span></div>
+          <div class="slide-head"><span class="slide-num">01</span> Deliverables <span class="slide-head-sub">Campaign materials</span></div>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">Social templates</div><p>Two, one with image and text and one text only.</p></div>
             <div class="slide-row"><div class="slide-row-lab">CRM templates</div><p>Two, square, in the same two arrangements.</p></div>
@@ -190,41 +152,41 @@ body { padding-top: var(--pad); }
         </div>
       </article>
 
-      <!-- 03 Identity. Captions in brackets are placeholders. A full-bleed mockup goes in a cover slide as <img class="slide-media">. A square mockup goes in .slide-img-lead. -->
-      <article class="deck-chapter" id="identity" data-name="Identity" data-num="03" aria-label="03 Identity">
+      <!-- 02 Identity. Captions in brackets are placeholders. A full-bleed mockup goes in a cover slide as <img class="slide-media">. A square mockup goes in .slide-img-lead. -->
+      <article class="deck-chapter" id="identity" data-name="Identity" data-num="02" aria-label="02 Identity">
         <div class="deck-slide slide-cover">
           <div class="slide-num">Identity</div>
           <h2 class="slide-title">Boulder Flipside</h2>
           <p class="slide-tagline">[Cover mockup, the identity in its setting.]</p>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Concept</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Concept</span></div>
           <p class="slide-lede is-pending">[Where the identity comes from, in one or two sentences.]</p>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Primary mark</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary mark</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[What the logo is made of, and the decision behind the letterforms.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Primary mark</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary mark</span></div>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Positive</p></div>
             <div class="slide-visual"><div class="slide-img"></div><p>Reversed</p></div>
           </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Logo lockup</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Logo lockup</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[How Boulder and Flipside sit together in the lockup.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Secondary iteration</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Secondary iteration</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[What the secondary version is and where it gets used.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Iconic mark</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Iconic mark</span></div>
           <p class="slide-body">[What the iconic mark pulls from the logo.]</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Social avatar</p></div>
@@ -232,7 +194,7 @@ body { padding-top: var(--pad); }
           </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Color</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Color</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[How the colors overlap and what the transparency does.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
@@ -241,22 +203,22 @@ body { padding-top: var(--pad); }
           <p class="slide-tagline">[Why the window looks the way it does, read from the street.]</p>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Sandwich board</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Sandwich board</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[What the sandwich board does at the door.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Print poster</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Print poster</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[How the event details stay clear inside the layout.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Partner credit</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Partner credit</span></div>
           <div class="slide-exec"><p class="slide-lede is-pending">[How the partner logos sit with the Boulder Flipside logo.]</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">Social templates</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Social templates</span></div>
           <p class="slide-body">[What changes between the two posts and what stays fixed.]</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Image and text</p></div>
@@ -264,7 +226,7 @@ body { padding-top: var(--pad); }
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Identity <span class="slide-head-sub">CRM templates</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">CRM templates</span></div>
           <p class="slide-body">[How the identity carries into email.]</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Image and text</p></div>
@@ -273,10 +235,10 @@ body { padding-top: var(--pad); }
         </div>
       </article>
 
-      <!-- 04 Brand guidelines -->
-      <article class="deck-chapter" id="guidelines" data-name="Brand guidelines" data-num="04" aria-label="04 Brand guidelines">
+      <!-- 03 Brand guidelines -->
+      <article class="deck-chapter" id="guidelines" data-name="Brand guidelines" data-num="03" aria-label="03 Brand guidelines">
         <div class="deck-slide slide-dark">
-          <div class="slide-head"><span class="slide-num">04</span> Brand guidelines</div>
+          <div class="slide-head"><span class="slide-num">03</span> Brand guidelines</div>
           <p class="slide-lede">The logo, color, type, graphic elements, and the rules for using them, all on one page.</p>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">Guidelines</div><p><a class="slide-link" href="https://boulderflipside.studioparkside.co/guidelines/">Open the brand guidelines <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" style="width:.62em;height:.62em;vertical-align:.12em"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
@@ -285,16 +247,16 @@ body { padding-top: var(--pad); }
         </div>
       </article>
 
-      <!-- 05 Project sequence -->
-      <article class="deck-chapter" id="sequence" data-name="Project sequence" data-num="05" aria-label="05 Project sequence">
+      <!-- 04 Project sequence -->
+      <article class="deck-chapter" id="sequence" data-name="Project sequence" data-num="04" aria-label="04 Project sequence">
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">05</span> Project sequence</div>
+          <div class="slide-head"><span class="slide-num">04</span> Project sequence</div>
           <div class="slide-rows">
             <div class="slide-row slide-seq"><div class="slide-row-lab">01 Kickoff</div><p>Audience, brand character, and campaign materials.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">02 Project brief</div><p>Everything from kickoff, with a tentative schedule.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">03 Brand character review</div><p>We looked at both directions together.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">04 Brand character selection</div><p>You picked Pressed by hand.</p><span class="pill done">Completed</span></div>
-            <div class="slide-row slide-seq"><div class="slide-row-lab">05 Brand identity walkthrough</div><p></p><span class="pill filled">In progress</span></div>
+            <div class="slide-row slide-seq"><div class="slide-row-lab">05 Brand identity</div><p></p><span class="pill filled">In progress</span></div>
           </div>
         </div>
       </article>
@@ -308,7 +270,6 @@ body { padding-top: var(--pad); }
     <svg class="logo" role="img" aria-label="Studio Parkside"><use href="#sp-logo"/></svg>
     <div class="pill-group">
       <span class="pill light">Brand Identity</span>
-      <span class="pill light">Walkthrough</span>
       <span class="pill light">Shared TBD</span>
       <span class="pill filled">Boulder Flipside</span>
     </div>
