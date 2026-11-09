@@ -12,3 +12,6 @@
 # Logs and temp
 *.log
 node_modules/
+
+# Watermarked mockup previews, local only. Swap for the final mockups before pushing.
+_assets/mockup-preview/

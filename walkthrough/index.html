@@ -14,11 +14,6 @@
 body { padding-top: var(--pad); }
 .deck.is-live { --stage-top: 12px; --stage-h: calc(100svh - var(--foot-h, 0px) - 24px); }
 .deck-chapter { scroll-margin-top: 12px; }
-/* Arrows at the top right of every slide, smaller and semi-transparent, so the foot of the slide is free for images. */
-.deck.is-live .slide-nav { top: clamp(14px, 2cqw, 26px); bottom: auto; opacity: .55; transition: opacity .15s ease; }
-.deck.is-live .slide-nav:hover, .deck.is-live .slide-nav:focus-within { opacity: 1; }
-.slide-nav .deck-btn { width: clamp(34px, 3.2cqw, 44px); height: clamp(34px, 3.2cqw, 44px); font-size: clamp(14px, 1.35cqw, 18px); }
-.deck.is-live .deck-slide:has(.slide-nav):not(.slide-cover):not(.slide-split) { padding-bottom: clamp(24px, 4.6cqw, 60px); }
 
 /* Contents. One line per section at display size, regular weight, each a link to its section. */
 .slide-toc-list { display: flex; flex-direction: column; margin: auto 0; }
@@ -33,17 +28,13 @@ body { padding-top: var(--pad); }
 .slide-dark .slide-head-sub::before { color: rgba(255,255,255,.4); }
 .slide-dark .slide-lede { font-size: clamp(22px, 3.6cqw, 48px); max-width: 30ch; }
 .slide-dark .slide-row { border-top-color: var(--hairline-light); }
-.slide-dark .slide-row:first-child { border-top-color: rgba(255,255,255,.5); }
 .slide-dark .slide-row-lab { font-size: clamp(14px, 1.5cqw, 20px); }
 .slide-dark .slide-row p { font-size: clamp(16px, 2cqw, 27px); max-width: 52ch; }
 .slide-dark .slide-link { border-bottom-color: rgba(255,255,255,.4); }
 .slide-dark .slide-link:hover { border-bottom-color: var(--paper); }
-.slide-dark .slide-nav .deck-btn { background: transparent; border-color: rgba(255,255,255,.5); color: var(--paper); }
-.slide-dark .slide-nav .deck-btn:not(.back) { background: var(--paper); border-color: var(--paper); color: var(--deep); }
 
-/* Cover description wraps at half the slide and runs a step heavier. The scrim climbs from the foot of the slide up past the headline. */
+/* Cover description wraps at half the slide and runs a step heavier. */
 .slide-cover .slide-tagline { max-width: 50%; font-weight: 500; }
-.slide-cover:has(.slide-media)::after { background: linear-gradient(to top, rgb(0 0 0 / .82) 0%, rgb(0 0 0 / .66) 26%, rgb(0 0 0 / .3) 50%, transparent 70%), linear-gradient(to bottom, rgb(0 0 0 / .32), transparent 26%); }
 
 /* The Studio Parkside logo sits where the cover's top line would be. The shared date stays in the footer pills. */
 .slide-cover .slide-logo { display: block; align-self: flex-start; height: clamp(13px, 1.4cqw, 19px); width: auto; aspect-ratio: 1499.4 / 151; fill: var(--paper); }
@@ -101,8 +92,7 @@ body { padding-top: var(--pad); }
         </div>
         <div class="deck-slide slide-dark">
           <nav class="slide-toc-list" aria-label="Contents">
-            <a href="#recap"><span class="n">A</span><span>Recap</span></a>
-            <a href="#deliverables"><span class="n">01</span><span>Deliverables</span></a>
+            <a href="#recap"><span class="n">01</span><span>Recap</span></a>
             <a href="#identity"><span class="n">02</span><span>Identity</span></a>
             <a href="#guidelines"><span class="n">03</span><span>Brand guidelines</span></a>
             <a href="#sequence"><span class="n">04</span><span>Project sequence</span></a>
@@ -110,28 +100,27 @@ body { padding-top: var(--pad); }
         </div>
       </article>
 
-      <!-- A Recap -->
-      <article class="deck-chapter" id="recap" data-name="Recap" data-num="A" aria-label="A Recap">
+      <!-- 01 Recap. The brand, its character, and the deliverables, each slide under its own title. -->
+      <article class="deck-chapter" id="recap" data-name="Recap" data-num="01" aria-label="01 Recap">
         <div class="deck-slide slide-dark">
-          <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Project</span></div>
-          <p class="slide-lede">Boulder Flipside is a program of art, sound, performance, and talks in spaces around Boulder during Sundance. I designed its logo and look, along with the posters, social posts, emails, and storefront signs that announce it.</p>
+          <div class="slide-head"><span class="slide-num">01</span> Recap</div>
+          <h2 class="slide-h">Brand</h2>
+          <p class="slide-lede">Boulder Flipside creates opportunities for visitors and locals alike to encounter art, sound, performance, and talks in spaces around Boulder during Sundance.</p>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">A</span> Recap <span class="slide-head-sub">Brand character</span></div>
+          <div class="slide-head"><span class="slide-num">01</span> Recap</div>
+          <h2 class="slide-h">Brand character</h2>
           <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Progressive</div><p>Bold and contemporary, closer to the art you&rsquo;d find in a city like New York, LA, or London.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Word mark</div><p>Boulder stays as prominent as Flipside in every lockup.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Type first</div><p>The identity is built around the name, with room for negative space, mirroring, rotation, and flipped letterforms.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Wayfinding</div><p>Obvious from the street, and clear that everyone&rsquo;s welcome to walk in.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">Every kind of program</div><p>Visual art, sound, performance, immersive work, talks. No reference to any one medium.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Progressive</div><p>Bold and contemporary, with the vibe of Boulder.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Word mark</div><p>Boulder is just as important as Flipside in how the name is set.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Typography</div><p>The identity is built around the program name, so it&rsquo;s easy to recognize and remember.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Wayfinding</div><p>Bold lettering, bright colors, and a welcoming look.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Inclusive</div><p>The look and feel work for every kind of art: visual art, sound, performance, immersive work, and talks.</p></div>
           </div>
         </div>
-      </article>
-
-      <!-- 01 Deliverables -->
-      <article class="deck-chapter" id="deliverables" data-name="Deliverables" data-num="01" aria-label="01 Deliverables">
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">01</span> Deliverables <span class="slide-head-sub">Brand identity</span></div>
+          <div class="slide-head"><span class="slide-num">01</span> Recap</div>
+          <h2 class="slide-h">Brand identity</h2>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">Primary mark</div><p>With a logo lockup and secondary iteration.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Iconic mark</div><p>A simplified graphic for the social avatar, the favicon, and other small applications.</p></div>
@@ -140,10 +129,11 @@ body { padding-top: var(--pad); }
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">01</span> Deliverables <span class="slide-head-sub">Campaign materials</span></div>
+          <div class="slide-head"><span class="slide-num">01</span> Recap</div>
+          <h2 class="slide-h">Campaign materials</h2>
           <div class="slide-rows">
             <div class="slide-row"><div class="slide-row-lab">Social templates</div><p>Two, one with image and text and one text only.</p></div>
-            <div class="slide-row"><div class="slide-row-lab">CRM templates</div><p>Two, square, in the same two arrangements.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">CRM templates</div><p>Two, square.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Print poster</div><p>One template, built around the copy you shared.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Window graphic</div><p>One design for the storefront glass.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Sandwich board</div><p>One design for the second storefront placement.</p></div>
@@ -152,42 +142,46 @@ body { padding-top: var(--pad); }
         </div>
       </article>
 
-      <!-- 02 Identity. Captions in brackets are placeholders. A full-bleed mockup goes in a cover slide as <img class="slide-media">. A square mockup goes in .slide-img-lead. -->
+      <!-- 02 Identity. A full-bleed mockup goes in a cover slide as <img class="slide-media">. A square mockup goes in .slide-img-lead. A template goes in the .slide-img inside its Instagram frame or its .slide-visual. The Bonus slides are concepts outside the scope of work. -->
       <article class="deck-chapter" id="identity" data-name="Identity" data-num="02" aria-label="02 Identity">
-        <div class="deck-slide slide-cover">
-          <div class="slide-num">Identity</div>
-          <h2 class="slide-title">Boulder Flipside</h2>
-          <p class="slide-tagline">[Cover mockup, the identity in its setting.]</p>
+        <div class="deck-slide slide-cover bare">
+          <!-- Neon sign mockup behind the headline, unlabeled: <img class="slide-media" src="../_assets/img/identity-cover.jpg" alt=""> -->
+          <img class="slide-media" src="../_assets/mockup-preview/neon.jpg" alt="">
+          <h2 class="slide-title">Local Art.<br>Surprising Places.</h2>
         </div>
-        <div class="deck-slide">
+        <div class="deck-slide slide-dark">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Concept</span></div>
-          <p class="slide-lede is-pending">[Where the identity comes from, in one or two sentences.]</p>
+          <div class="slide-lede long">
+            <p>The Boulder Flipside visual identity is a system made to speak boldly and read clearly. It stands out on the street, sticks in people&rsquo;s minds, and leaves room for the whole range of Boulder&rsquo;s art scene.</p>
+            <p>The look comes from printmaking, where every stamp, block, and screen prints the mirror image of what&rsquo;s carved into it.</p>
+            <p>Simple lettering with a handmade edge flips the way a print does, and gives the program the feel of an artist&rsquo;s studio, open to anyone who wanders in.</p>
+          </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary mark</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[What the logo is made of, and the decision behind the letterforms.]</p></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary logotype</span></div>
+          <div class="slide-exec"><p class="slide-lede">A customized typeface with the tactile edge of a stamp, simple enough to read against busy artwork. Part of the name flips, and Boulder gets the same weight as Flipside.</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary mark</span></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary logotype</span></div>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Positive</p></div>
             <div class="slide-visual"><div class="slide-img"></div><p>Reversed</p></div>
           </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Logo lockup</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[How Boulder and Flipside sit together in the lockup.]</p></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Secondary logotype</span></div>
+          <div class="slide-exec"><p class="slide-lede">The name on one line, for wide spaces like email headers.</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Secondary iteration</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[What the secondary version is and where it gets used.]</p></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Brand mark</span></div>
+          <div class="slide-exec"><p class="slide-lede">An outline of the B with the F nestled inside, so the mark makes its own holding shape. It works like a stamp.</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Iconic mark</span></div>
-          <p class="slide-body">[What the iconic mark pulls from the logo.]</p>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Brand mark</span></div>
+          <p class="slide-body">The brand mark replaces the logo anywhere the name would be too small to read, like the social avatar and the favicon.</p>
           <div class="slide-visuals">
             <div class="slide-visual"><div class="slide-img"></div><p>Social avatar</p></div>
             <div class="slide-visual"><div class="slide-img"></div><p>Favicon</p></div>
@@ -195,43 +189,108 @@ body { padding-top: var(--pad); }
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Color</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[How the colors overlap and what the transparency does.]</p></div>
+          <div class="slide-exec"><p class="slide-lede">The colors take after ink on a hand-printed poster, where every print comes out a little different. Bright and fresh, they make each piece look like it just came off the press.</p></div>
           <div class="slide-img slide-img-lead"></div>
         </div>
-        <div class="deck-slide slide-cover">
-          <div class="slide-num">Window graphic</div>
-          <p class="slide-tagline">[Why the window looks the way it does, read from the street.]</p>
+        <div class="deck-slide slide-cover captioned">
+          <img class="slide-media" src="../_assets/mockup-preview/window.jpg" alt="">
+          <div class="slide-caption">
+            <div class="slide-num">Window graphic</div>
+            <p class="slide-tagline">The dates, the website, and a short promotional line are set big and bright, an invitation to come in and look around.</p>
+          </div>
         </div>
         <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Window graphic</span></div>
+          <div class="slide-exec"><p class="slide-lede">A second window design, sized for a smaller pane of glass. This is a bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/window-sign.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Sandwich board</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[What the sandwich board does at the door.]</p></div>
-          <div class="slide-img slide-img-lead"></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Print poster</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[How the event details stay clear inside the layout.]</p></div>
-          <div class="slide-img slide-img-lead"></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Partner credit</span></div>
-          <div class="slide-exec"><p class="slide-lede is-pending">[How the partner logos sit with the Boulder Flipside logo.]</p></div>
-          <div class="slide-img slide-img-lead"></div>
-        </div>
-        <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Social templates</span></div>
-          <p class="slide-body">[What changes between the two posts and what stays fixed.]</p>
+          <p class="slide-body">The sandwich board is an A-frame sign that can stand anywhere on the ground, outside a building or inside. One version leads with a big statement that flips. The other frames the tagline with the logo above and below.</p>
           <div class="slide-visuals">
-            <div class="slide-visual"><div class="slide-img"></div><p>Image and text</p></div>
-            <div class="slide-visual"><div class="slide-img"></div><p>Text only</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div><p>Statement</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div><p>Tagline</p></div>
+          </div>
+        </div>
+        <div class="deck-slide slide-posters">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Print posters</span></div>
+          <p class="slide-body">One layout uses type and color alone on blue. The other adds images on white, with room for the full range of work in the program, from screen printing to video art.</p>
+          <div class="slide-visuals">
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/poster-type.jpg" alt=""></div><p>Type on blue</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/poster-images.jpg" alt=""></div><p>Images on white</p></div>
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">CRM templates</span></div>
-          <p class="slide-body">[How the identity carries into email.]</p>
-          <div class="slide-visuals">
-            <div class="slide-visual"><div class="slide-img"></div><p>Image and text</p></div>
-            <div class="slide-visual"><div class="slide-img"></div><p>Text only</p></div>
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Instagram posts</span></div>
+          <p class="slide-body">The posts move between introducing Boulder Flipside and promoting a single event. The same color and type run through every one, so each post reads as part of the program. This set includes a bonus sample.</p>
+          <div class="slide-visuals posts">
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b></div><div class="slide-img"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b></div><div class="slide-img"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b></div><div class="slide-img"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b></div><div class="slide-img"></div><div class="ig-actions"></div></div></div>
           </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Instagram stories</span></div>
+          <p class="slide-body">The stories follow the same range from brand to event, set full screen for the phone. These are bonus samples.</p>
+          <div class="slide-visuals stories">
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"></div><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"></div><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"></div><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"></div><div class="ig-head"><i class="ig-avatar"></i><b>boulderflipside</b><span>2h</span></div></div></div>
+          </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">CRM templates, square</span></div>
+          <p class="slide-body">The email templates follow the posts, moving from the brand to single events. This set includes a bonus sample.</p>
+          <div class="slide-visuals square">
+            <div class="slide-visual"><div class="slide-img"></div><p>Brand</p></div>
+            <div class="slide-visual"><div class="slide-img"></div><p>Event</p></div>
+            <div class="slide-visual"><div class="slide-img"></div><p>Brand</p></div>
+          </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">CRM templates, horizontal</span></div>
+          <p class="slide-body">Header banners for the top of an email, in the same brand and event versions. These are bonus samples.</p>
+          <div class="slide-visuals wide">
+            <div class="slide-visual"><div class="slide-img"></div><p>Brand</p></div>
+            <div class="slide-visual"><div class="slide-img"></div><p>Event</p></div>
+          </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Bonus: Stamp and door hanger</span></div>
+          <p class="slide-body">The brand mark made into a rubber stamp, and the identity on a door hanger. These extra brand applications are bonus examples and aren&rsquo;t included in the project scope of work.</p>
+          <div class="slide-visuals">
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/stamp.jpg" alt=""></div><p>Stamp</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/door-hanger.jpg" alt=""></div><p>Door hanger</p></div>
+          </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Bonus: Accessories</span></div>
+          <p class="slide-body">Shirts and hats for the volunteers at each venue, so visitors know who to ask.</p>
+          <div class="slide-visuals">
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/shirt.jpg" alt=""></div><p>Shirt</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/hat.jpg" alt=""></div><p>Hat</p></div>
+          </div>
+        </div>
+        <div class="deck-slide">
+          <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Bonus: Keepsakes</span></div>
+          <p class="slide-body">A sticker and a palm card for people to take with them after a visit.</p>
+          <div class="slide-visuals">
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/sticker.jpg" alt=""></div><p>Sticker</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/palm-card.jpg" alt=""></div><p>Palm card</p></div>
+          </div>
+        </div>
+        <div class="deck-slide slide-cover captioned">
+          <img class="slide-media upper" src="../_assets/mockup-preview/poster-commemorative.jpg" alt="">
+          <div class="slide-caption">
+            <div class="slide-num">Bonus: Commemorative poster</div>
+            <p class="slide-tagline">A third poster layout made to keep, in the spirit of the screen-printed posters behind the identity.</p>
+          </div>
+        </div>
+        <div class="deck-slide slide-cover bare">
+          <!-- Flag mockup, full bleed, unlabeled: <img class="slide-media" src="../_assets/img/flag.jpg" alt=""> -->
+          <img class="slide-media" src="../_assets/mockup-preview/flag.jpg" alt="">
         </div>
       </article>
 
@@ -239,8 +298,8 @@ body { padding-top: var(--pad); }
       <article class="deck-chapter" id="guidelines" data-name="Brand guidelines" data-num="03" aria-label="03 Brand guidelines">
         <div class="deck-slide slide-dark">
           <div class="slide-head"><span class="slide-num">03</span> Brand guidelines</div>
-          <p class="slide-lede">The logo, color, type, graphic elements, and the rules for using them, all on one page.</p>
-          <div class="slide-rows">
+          <p class="slide-lede">Guidelines for the visual identity, including logos, color, type, and graphic elements.</p>
+          <div class="slide-rows even">
             <div class="slide-row"><div class="slide-row-lab">Guidelines</div><p><a class="slide-link" href="https://boulderflipside.studioparkside.co/guidelines/">Open the brand guidelines <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" style="width:.62em;height:.62em;vertical-align:.12em"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
             <div class="slide-row"><div class="slide-row-lab">Files</div><p><a class="slide-link" href="#">Download the brand files <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" style="width:.62em;height:.62em;vertical-align:.12em"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
           </div>
@@ -255,8 +314,8 @@ body { padding-top: var(--pad); }
             <div class="slide-row slide-seq"><div class="slide-row-lab">01 Kickoff</div><p>Audience, brand character, and campaign materials.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">02 Project brief</div><p>Everything from kickoff, with a tentative schedule.</p><span class="pill done">Completed</span></div>
             <div class="slide-row slide-seq"><div class="slide-row-lab">03 Brand character review</div><p>We looked at both directions together.</p><span class="pill done">Completed</span></div>
-            <div class="slide-row slide-seq"><div class="slide-row-lab">04 Brand character selection</div><p>You picked Pressed by hand.</p><span class="pill done">Completed</span></div>
-            <div class="slide-row slide-seq"><div class="slide-row-lab">05 Brand identity</div><p></p><span class="pill filled">In progress</span></div>
+            <div class="slide-row slide-seq"><div class="slide-row-lab">04 Brand character selection</div><p>You picked Direction 02, Pressed by hand.</p><span class="pill done">Completed</span></div>
+            <div class="slide-row slide-seq"><div class="slide-row-lab">05 Brand identity</div><p>All logo and identity files are available to download.</p><span class="pill filled">Completed</span></div>
           </div>
         </div>
       </article>
@@ -269,8 +328,8 @@ body { padding-top: var(--pad); }
   <footer class="botbar">
     <svg class="logo" role="img" aria-label="Studio Parkside"><use href="#sp-logo"/></svg>
     <div class="pill-group">
-      <span class="pill light">Brand Identity</span>
       <span class="pill light">Shared TBD</span>
+      <span class="pill light">Brand Identity</span>
       <span class="pill filled">Boulder Flipside</span>
     </div>
   </footer>
