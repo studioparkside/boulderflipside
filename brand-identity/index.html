@@ -10,6 +10,10 @@
 <style>
 /* ---- Page-specific rules ---- */
 
+/* The brand typefaces, for the type pair on the Type slide. */
+@font-face { font-family: "Canteen BN"; src: url("../_assets/fonts/canteen-bn-bold.otf") format("opentype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "PP Fraktion Mono"; src: url("../_assets/fonts/pp-fraktion-mono-bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
 /* No header on this deck. The footer alone frames the slides, so the stage starts at the top of the window. */
 body { padding-top: var(--pad); }
 .deck.is-live { --stage-top: 12px; --stage-h: calc(100svh - var(--foot-h, 0px) - 24px); }
@@ -105,7 +109,7 @@ body { padding-top: var(--pad); }
       <article class="deck-chapter" id="recap" data-name="Recap" data-num="01" aria-label="01 Recap">
         <div class="deck-slide slide-dark">
           <div class="slide-head"><span class="slide-num">01</span> Recap</div>
-          <h2 class="slide-h">Brand</h2>
+          <h2 class="slide-h">Boulder Flipside</h2>
           <p class="slide-lede">Boulder Flipside creates opportunities for visitors and locals alike to encounter art, sound, performance, and talks in spaces around Boulder during Sundance.</p>
         </div>
         <div class="deck-slide">
@@ -123,7 +127,7 @@ body { padding-top: var(--pad); }
           <div class="slide-head"><span class="slide-num">01</span> Recap</div>
           <h2 class="slide-h">Brand identity</h2>
           <div class="slide-rows">
-            <div class="slide-row"><div class="slide-row-lab">Primary mark</div><p>With a logo lockup and secondary iteration.</p></div>
+            <div class="slide-row"><div class="slide-row-lab">Primary mark</div><p>Logotype and secondary iteration.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Iconic mark</div><p>A simplified graphic for the social avatar, the favicon, and other small applications.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Logo artwork</div><p>Every mark and arrangement, in AI, EPS, PDF, PNG, and SVG.</p></div>
             <div class="slide-row"><div class="slide-row-lab">Brand guidelines</div><p>The logo, color, type, graphic elements, and the rules for using them.</p></div>
@@ -165,146 +169,147 @@ body { padding-top: var(--pad); }
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Primary logotype</span></div>
           <div class="slide-visuals">
-            <div class="slide-visual"><div class="slide-img logo-box lg"><img src="../_assets/logo/bf-type-stacked-overlap.svg" alt="Primary logotype in blue"></div><p>Positive</p></div>
+            <div class="slide-visual"><div class="slide-img logo-box lg"><img src="../_assets/logo/bf-type-stacked-black.svg" alt="Primary logotype in black"></div><p>Positive</p></div>
             <div class="slide-visual"><div class="slide-img logo-box lg rev"><img src="../_assets/logo/bf-type-stacked-white.svg" alt="Primary logotype in white"></div><p>Reversed</p></div>
           </div>
         </div>
-        <div class="deck-slide slide-split">
+        <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Secondary logotype</span></div>
-          <div class="slide-exec"><p class="slide-lede">The name on one line, for wide spaces like email headers.</p></div>
-          <div class="slide-img slide-img-lead logo-box lg" style="background:#0050C8"><img src="../_assets/logo/bf-type-wide-white.svg" alt="Boulder Flipside secondary logotype"></div>
+          <img class="slide-wordmark" src="../_assets/logo/bf-type-wide-brand.svg" alt="Boulder Flipside secondary logotype">
+          <p class="slide-body">The name on one line, for wide spaces like email headers.</p>
         </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Secondary logotype</span></div>
           <div class="slide-visuals">
-            <div class="slide-visual"><div class="slide-img logo-box lg"><img src="../_assets/logo/bf-type-wide-blue.svg" alt="Secondary logotype in blue"></div><p>Positive</p></div>
+            <div class="slide-visual"><div class="slide-img logo-box lg"><img src="../_assets/logo/bf-type-wide-black.svg" alt="Secondary logotype in black"></div><p>Positive</p></div>
             <div class="slide-visual"><div class="slide-img logo-box lg rev"><img src="../_assets/logo/bf-type-wide-white.svg" alt="Secondary logotype in white"></div><p>Reversed</p></div>
           </div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Brand mark</span></div>
-          <div class="slide-exec"><p class="slide-lede">An outline of the B with the F inside, so the mark makes its own holding shape.</p></div>
-          <div class="slide-img slide-img-lead logo-box" style="background:#0050C8"><img src="../_assets/logo/bf-icon-white.svg" alt="Boulder Flipside brand mark"></div>
+          <div class="slide-exec"><p class="slide-body">An outline of the B with the F inside, so the mark makes its own holding shape.</p><p class="slide-body">The brand mark replaces the logo anywhere the name would be too small to read. It&rsquo;s also used for digital applications like social media avatars and the website favicon.</p></div>
+          <div class="slide-img slide-img-lead logo-box"><img src="../_assets/logo/bf-icon-black.svg" alt="Boulder Flipside brand mark"></div>
         </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Brand mark</span></div>
-          <p class="slide-body">The brand mark replaces the logo anywhere the name would be too small to read. It&rsquo;s also used for digital applications like social media avatars and the website favicon.</p>
           <div class="slide-visuals single">
-            <div class="slide-visual"><div class="slide-img logo-box"><i class="mark-avatar" style="background:#0050C8"><img src="../_assets/logo/bf-icon-white.svg" alt="Brand mark as a social avatar and favicon"></i></div><p>Social avatar/favicon</p></div>
+            <div class="slide-visual"><div class="slide-img logo-box"><i class="mark-avatar" style="background:#00606A"><img src="../_assets/logo/bf-icon-white.svg" alt="Brand mark as a social avatar and favicon"></i></div><p>Social avatar/favicon</p></div>
           </div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Color</span></div>
-          <div class="slide-exec"><p class="slide-lede">The colors take after ink on a hand-printed poster, where every print comes out a little different. Bright and fresh, they make each piece look like it just came off the press.</p></div>
+          <div class="slide-exec"><p class="slide-body">The colors take after ink on a hand-printed poster, where every print comes out a little different. Bright and fresh, they make each piece look like it just came off the press.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/layouts/color.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Type</span></div>
-          <div class="slide-exec"><p class="slide-lede">Headlines are set in Alte Haas Grotesk, large and bold. Event details and longer blocks of text are set in PP Fraktion Mono.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/layouts/type.jpg" alt=""></div>
+          <div class="slide-exec"><p class="slide-body">Headlines are set in Canteen BN, large and bold. Event details and longer blocks of text are set in PP Fraktion Mono.</p></div>
+          <div class="slide-img slide-img-lead logo-box type-pair" role="img" aria-label="Canteen BN and PP Fraktion Mono"><span style="font-family:'Canteen BN'">Aa</span><span style="font-family:'PP Fraktion Mono'">Aa</span></div>
         </div>
       </article>
 
       <!-- 03 Applications. Every campaign piece and the bonus samples. -->
       <article class="deck-chapter" id="applications" data-name="Applications" data-num="03" aria-label="03 Applications">
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic 1</span></div>
-          <div class="slide-exec"><p class="slide-lede">The window graphic includes pertinent information about the series in a bold arrangement.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
+          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/window.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic 2</span></div>
-          <div class="slide-exec"><p class="slide-lede">Another layout for a window graphic. This is a bonus sample.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/window-sign.jpg" alt=""></div>
         </div>
-        <div class="deck-slide">
+        <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sandwich board</span></div>
-          <p class="slide-body">One version leads with a big statement that flips. The other frames the tagline with the logo above and below.</p>
-          <div class="slide-visuals">
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div><p>Statement</p></div>
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div><p>Tagline</p></div>
-          </div>
+          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster 1</span></div>
-          <div class="slide-exec"><p class="slide-lede">The print poster collects details about the project and the specific installation.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sandwich board</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/sandwich-board.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
+          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/poster-type.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster 2</span></div>
-          <div class="slide-exec"><p class="slide-lede">The print poster features the project branding along with images of an installation and artist.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/poster-images.jpg" alt=""></div>
         </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Instagram posts</span></div>
-          <p class="slide-body">The posts move between introducing Boulder Flipside and promoting a single event. The same color and type run through every one, so each post reads as part of the program. This set includes a bonus sample.</p>
+          <p class="slide-body">This set includes a bonus sample.</p>
           <div class="slide-visuals posts">
-            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-1.jpg" alt="Instagram post 1"></div><div class="ig-actions"></div></div></div>
-            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-2.jpg" alt="Instagram post 2"></div><div class="ig-actions"></div></div></div>
-            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-3.jpg" alt="Instagram post 3"></div><div class="ig-actions"></div></div></div>
-            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-4.jpg" alt="Instagram post 4"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-1.jpg" alt="Instagram post 1"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-2.jpg" alt="Instagram post 2"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-3.jpg" alt="Instagram post 3"></div><div class="ig-actions"></div></div></div>
+            <div class="slide-visual"><div class="ig-post"><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b></div><div class="slide-img"><img src="../_assets/layouts/instagram-post-4.jpg" alt="Instagram post 4"></div><div class="ig-actions"></div></div></div>
           </div>
         </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Instagram stories</span></div>
-          <p class="slide-body">The stories follow the same range from brand to event, set full screen for the phone. These are bonus samples.</p>
+          <p class="slide-body">These are bonus samples.</p>
           <div class="slide-visuals stories">
-            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-1.jpg" alt="Instagram story 1"></div><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
-            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-2.jpg" alt="Instagram story 2"></div><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
-            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-3.jpg" alt="Instagram story 3"></div><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
-            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-4.jpg" alt="Instagram story 4"></div><div class="ig-head"><i class="ig-avatar" style="background:#0050C8"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-1.jpg" alt="Instagram story 1"></div><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-2.jpg" alt="Instagram story 2"></div><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-3.jpg" alt="Instagram story 3"></div><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
+            <div class="slide-visual"><div class="ig-story"><div class="slide-img"><img src="../_assets/layouts/instagram-story-4.jpg" alt="Instagram story 4"></div><div class="ig-head"><i class="ig-avatar" style="background:#00606A"><img class="mark" src="../_assets/logo/bf-icon-white.svg" alt=""></i><b>boulderflipside</b><span>2h</span></div></div></div>
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">CRM templates 1</span></div>
-          <p class="slide-body">The email templates follow the posts, moving from the brand to single events. This set includes a bonus sample.</p>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">CRM templates</span></div>
+          <p class="slide-body">This set includes a bonus sample.</p>
           <div class="slide-visuals square">
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-1.jpg" alt="CRM template 1"></div><p>Brand</p></div>
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-2.jpg" alt="CRM template 2"></div><p>Event</p></div>
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-3.jpg" alt="CRM template 3"></div><p>Brand</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-1.jpg" alt="CRM template 1"></div></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-2.jpg" alt="CRM template 2"></div></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-3.jpg" alt="CRM template 3"></div></div>
           </div>
         </div>
         <div class="deck-slide">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">CRM templates 2</span></div>
-          <p class="slide-body">Header banners for the top of an email, in the same brand and event versions. These are bonus samples.</p>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">CRM templates</span></div>
+          <p class="slide-body">These are bonus samples.</p>
           <div class="slide-visuals wide">
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-4.jpg" alt="CRM template 4"></div><p>Brand</p></div>
-            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-2-wide.jpg" alt="CRM template 5"></div><p>Event</p></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-4.jpg" alt="CRM template 4"></div></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-2-wide.jpg" alt="CRM template 5"></div></div>
           </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Stamp</span></div>
-          <div class="slide-exec"><p class="slide-lede">The brand mark made into a rubber stamp. These extra brand applications are bonus examples and aren&rsquo;t included in the project scope of work.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Stamp</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/stamp.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Door hanger</span></div>
-          <div class="slide-exec"><p class="slide-lede">The identity on a door hanger.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Door hanger</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/door-hanger.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Shirt</span></div>
-          <div class="slide-exec"><p class="slide-lede">Shirts for the volunteers at each venue, so visitors know who to ask.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Shirt</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/shirt.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Hat</span></div>
-          <div class="slide-exec"><p class="slide-lede">A hat to go with the volunteer shirt.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Hat</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/hat.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Sticker</span></div>
-          <div class="slide-exec"><p class="slide-lede">A sticker for people to take with them after a visit.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sticker</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/sticker.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Palm card</span></div>
-          <div class="slide-exec"><p class="slide-lede">A palm card to keep.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Palm card</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/palm-card.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Bonus: Commemorative poster</span></div>
-          <div class="slide-exec"><p class="slide-lede">A third poster layout made to keep, in the spirit of the screen-printed posters behind the identity.</p></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Commemorative poster</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockup-preview/poster-commemorative.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-cover bare">
