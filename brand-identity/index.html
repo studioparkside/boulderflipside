@@ -83,7 +83,7 @@ body { padding-top: var(--pad); }
 <div class="stack">
 
   <!-- Deck, every section as a slide -->
-  <section class="deck flat" data-deck aria-label="Brand identity">
+  <section class="deck flat full" data-deck aria-label="Brand identity">
     <div class="deck-stage">
       <nav class="deck-index" aria-label="Sections"></nav>
       <div class="deck-frame">
@@ -149,15 +149,12 @@ body { padding-top: var(--pad); }
 
       <!-- 02 Identity. A full-bleed mockup goes in a cover slide as <img class="slide-media">. A square mockup goes in .slide-img-lead. A template goes in the .slide-img inside its Instagram frame or its .slide-visual. The Bonus slides are concepts outside the scope of work. -->
       <article class="deck-chapter" id="identity" data-name="Identity" data-num="02" aria-label="02 Identity">
-        <div class="deck-slide slide-cover bare">
-          <!-- Neon sign mockup behind the headline, unlabeled: <img class="slide-media" src="../_assets/img/identity-cover.jpg" alt=""> -->
-          <img class="slide-media" src="../_assets/mockups/neon.jpg" alt="">
-          <h2 class="slide-title">Local Art.<br>Surprising Places.</h2>
-        </div>
-        <div class="deck-slide slide-dark">
+        <div class="deck-slide slide-cover slide-dark bare">
+          <!-- Neon sign mockup on the right, the concept copy over the dark wall on the left -->
+          <img class="slide-media right" src="../_assets/mockups/neon.jpg" alt="">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Concept</span></div>
           <div class="slide-lede long">
-            <p>The Boulder Flipside visual identity is a system made to speak boldly and read clearly. It stands out on the street, sticks in people&rsquo;s minds, and welcomes every part of Boulder&rsquo;s art scene.</p>
+            <p><strong>Local Art. Surprising Places.</strong> The Boulder Flipside visual identity is a system made to speak boldly and read clearly. It stands out on the street, sticks in people&rsquo;s minds, and welcomes every part of Boulder&rsquo;s art scene.</p>
             <p>The look comes from printmaking, where every stamp, block, and screen prints the mirror image of what&rsquo;s carved into it.</p>
           </div>
         </div>
@@ -185,50 +182,25 @@ body { padding-top: var(--pad); }
             <div class="slide-visual"><div class="slide-img logo-box lg rev"><img src="../_assets/logo/bf-type-wide-white.svg" alt="Secondary logotype in white"></div><p>Reversed</p></div>
           </div>
         </div>
-        <div class="deck-slide slide-split">
+        <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Brand mark</span></div>
+          <div class="slide-img mark-ring stack"><i><img src="../_assets/logo/bf-icon-black.svg" alt="Boulder Flipside brand mark"></i></div>
           <div class="slide-exec"><p class="slide-body">An outline of the B with the F inside, so the mark makes its own holding shape.</p><p class="slide-body">The brand mark replaces the logo anywhere the name would be too small to read. It&rsquo;s also used for digital applications like social media avatars and the website favicon.</p></div>
-          <div class="slide-img slide-img-lead mark-ring"><i><img src="../_assets/logo/bf-icon-black.svg" alt="Boulder Flipside brand mark"></i></div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Color</span></div>
           <div class="slide-exec"><p class="slide-body">The colors take after ink on a hand-printed poster, where every print comes out a little different. Bright and fresh, they make each piece look like it just came off the press.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/layouts/color.jpg" alt=""></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/layouts/color-inks.svg" alt="Teal, pink, and orange overlapping like inks on off-white paper"></div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">02</span> Identity <span class="slide-head-sub">Type</span></div>
-          <div class="slide-exec"><p class="slide-body">Headlines are set in Canteen BN, large and bold. Event details and longer blocks of text are set in PP Fraktion Mono.</p></div>
+          <div class="slide-exec"><p class="slide-body">Large headlines are set in Canteen BN.</p><p class="slide-body">Smaller details and longer blocks of text are set in PP Fraktion Mono.</p></div>
           <div class="slide-img slide-img-lead logo-box type-pair" role="img" aria-label="Canteen BN and PP Fraktion Mono"><span style="font-family:'Canteen BN'">Aa</span><span style="font-family:'PP Fraktion Mono'">Aa</span></div>
         </div>
       </article>
 
       <!-- 03 Applications. Every campaign piece and the bonus samples. -->
       <article class="deck-chapter" id="applications" data-name="Applications" data-num="03" aria-label="03 Applications">
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
-          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/window-graphic-1.jpg" alt=""></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sandwich board</span></div>
-          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/sandwich-board-1.jpg" alt=""></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
-          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-type.jpg" alt=""></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
-          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-images.jpg" alt=""></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Commemorative poster</span></div>
-          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-commemorative.jpg" alt=""></div>
-        </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Instagram posts</span></div>
           <p class="slide-body">This set includes a bonus sample.</p>
@@ -258,16 +230,6 @@ body { padding-top: var(--pad); }
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-3.jpg" alt="CRM template 3"></div></div>
           </div>
         </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
-          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/window-graphic-2.jpg" alt=""></div>
-        </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sandwich board</span></div>
-          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/sandwich-board-2.jpg" alt=""></div>
-        </div>
         <div class="deck-slide">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">CRM templates</span></div>
           <p class="slide-body">These are bonus samples.</p>
@@ -276,15 +238,38 @@ body { padding-top: var(--pad); }
             <div class="slide-visual"><div class="slide-img"><img src="../_assets/layouts/crm-2-wide.jpg" alt="CRM template 5"></div></div>
           </div>
         </div>
-        <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Stamp</span></div>
-          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/stamp.jpg" alt=""></div>
+        <div class="deck-slide slide-posters">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sandwich boards</span></div>
+          <p class="slide-body">One sample is included in the scope of work. The second is a bonus sample.</p>
+          <div class="slide-visuals">
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockups/sandwich-board-1.jpg" alt="Sandwich board, teal"></div></div>
+            <div class="slide-visual"><div class="slide-img"><img src="../_assets/mockups/sandwich-board-2.jpg" alt="Sandwich board, pink"></div></div>
+          </div>
         </div>
         <div class="deck-slide slide-split">
-          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Door hanger</span></div>
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
+          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-type.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Print poster</span></div>
           <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
-          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/door-hanger.jpg" alt=""></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-images.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Commemorative poster</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/poster-commemorative.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
+          <div class="slide-exec"><p class="slide-body">Sample included with scope of work.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/window-graphic-1.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Window graphic</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/window-graphic-2.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-split">
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Shirt</span></div>
@@ -300,6 +285,16 @@ body { padding-top: var(--pad); }
           <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Sticker</span></div>
           <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
           <div class="slide-img slide-img-lead"><img src="../_assets/mockups/sticker.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Stamp</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/stamp.jpg" alt=""></div>
+        </div>
+        <div class="deck-slide slide-split">
+          <div class="slide-head"><span class="slide-num">03</span> Applications <span class="slide-head-sub">Door hanger</span></div>
+          <div class="slide-exec"><p class="slide-body">Bonus sample.</p></div>
+          <div class="slide-img slide-img-lead"><img src="../_assets/mockups/door-hanger.jpg" alt=""></div>
         </div>
         <div class="deck-slide slide-cover bare">
           <!-- Flag mockup, full bleed, unlabeled: <img class="slide-media" src="../_assets/img/flag.jpg" alt=""> -->
@@ -341,7 +336,7 @@ body { padding-top: var(--pad); }
   <footer class="botbar">
     <svg class="logo" role="img" aria-label="Studio Parkside"><use href="#sp-logo"/></svg>
     <div class="pill-group">
-      <span class="pill light">Shared TBD</span>
+      <span class="pill light">Shared 11/13</span>
       <span class="pill light">Brand Identity</span>
       <span class="pill filled">Boulder Flipside</span>
     </div>
